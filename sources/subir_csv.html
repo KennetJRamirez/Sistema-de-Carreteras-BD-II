@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subir archivo CSV</title>
+</head>
+
+<body>
+    <h1>Subir archivo CSV</h1>
+    <form action="procesar_csv.php" method="post" enctype="multipart/form-data">
+        <label for="csv_file">Seleccione un archivo CSV:</label><br>
+        <input type="file" name="csv_file" id="csv_file" accept=".csv" required><br><br>
+
+        <label for="tabla">Seleccione la tabla de destino:</label><br>
+        <select name="tabla" id="tabla" required>
+            <option value="carretera">Carretera</option>
+            <option value="tramo">Tramo</option>
+            <option value="comunidad">Comunidad</option>
+            <option value="tramo_comunidad">Tramo_comunidad</option>
+            <option value="carretera_comunidad">Carretera_comunidad</option>
+        </select><br><br>
+
+        <button type="submit">Subir archivo</button>
+    </form>
+</body>
+
+</html>
